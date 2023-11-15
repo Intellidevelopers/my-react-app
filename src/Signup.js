@@ -2,15 +2,15 @@
 import React, { useState } from 'react';
 
 const Signup = ({ handleSignup }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add signup logic here
-    handleSignup({ email, password });
-  };
-
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      // Add signup logic here
+      handleSignup({ email, password, username });
+    };
   return (
     <div>
       <h2>Signup</h2>
@@ -27,6 +27,6 @@ const Signup = ({ handleSignup }) => {
       </form>
     </div>
   );
-};
+  };
 
 export default Signup;

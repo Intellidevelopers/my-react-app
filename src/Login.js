@@ -9,7 +9,7 @@ const Login = ({ handleLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add authentication logic here
-    handleLogin({ email, password, username });
+    handleLogin({ email, password,username});
   };
 
   return (
@@ -17,15 +17,15 @@ const Login = ({ handleLogin }) => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
       <label>Username:
-          <input type="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input type="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' />
         </label>
         <br />
         <label>Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'/>
         </label>
         <br />
         <label>Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'/>
         </label>
         <br />
         <button type="submit">Login</button>
